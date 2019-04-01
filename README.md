@@ -25,3 +25,20 @@ I could then create a 2D array of the gameboard, composed of the arrays of the c
 
 I think that the checkingForWinner function that I will inevitable have to invoke will be hard to create, I'm not really sure how I'd do this. 
 
+This is what I'd use to create the board: 
+
+let connectFourBoard = document.querySelector('.container');
+
+function createBoard () { 
+	for (let i = 0; i < 42; i ++) {
+		let div = document.createElement('div');
+		console.log(div);
+		div.classList.add('box');
+		div.setAttribute('id', `element-${[i]}`);
+		connectFourBoard.appendChild(div);
+
+	}
+}
+
+createBoard();
+
