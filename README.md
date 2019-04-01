@@ -1,4 +1,4 @@
-# connect-four-project-
+# connect-the-fourth-project-
 Connect Four project for GA
 
 I am making a Connect-Four style project that utilises HTML, CSS, JavaScript, collision detection, and CSS animation. 
