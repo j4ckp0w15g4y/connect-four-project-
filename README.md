@@ -15,3 +15,9 @@ If one has neither then the current player's colour will be added (classlist.add
 
 I would then also create row variables which are composed of the elements within each row of my gameboard. 
 
+Each row has a possible 4 winning combinations, and * by 6 this is 24 in total. 
+Each column has a possible 3 winning combinations and * by 7 this is 21 in total. 
+
+The diagonals have 24 possible winning combinations, so I would need to create a function that would check to see if there are any winning positions in play. 
+I am not sure how I'd do this elegantly, but for the outset I would just brute force the winning positions into a 2D array. 
+
