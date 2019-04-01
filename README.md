@@ -1,7 +1,7 @@
 # connect-four-project-
 Connect Four project for GA
 
-I am making a Connect-Four style project that utilises HTML, CSS, JavaScript and also collision detection, and CSS animation. 
+I am making a Connect-Four style project that utilises HTML, CSS, JavaScript, collision detection, and CSS animation. 
 
 Connect-four works in columns, the player drops a piece into a column. So I would need to create four column variables, 
 	eg. let column1 = document.querySelectorAll('#element-0, #element-7, #element-14, #element-21, #element-28, #element-35')
