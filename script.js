@@ -1,44 +1,128 @@
 
-let connectFourBoard = document.querySelector('.container');
+let cFB = [
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0]
+]
 
 
-function createBoard () { 
-	for (let i = 0; i < 42; i ++) {
-		let div = document.createElement('div');
-		console.log(div);
-		div.classList.add('box');
-		// div.setAttribute('id', `element-${[i]}`);
-		div.innerText = [i];
-		connectFourBoard.appendChild(div);
+let player1 = 1;
+let player2 = 2;
 
+
+//possibly put rowy back inbetween column and player
+
+
+	function dropTile(column, row, player) {
+		for (i = 0; i < column.length; i++) {
+			if (column[i] === 0) {
+				column[i] = player;
+				 checkForWinnerColumn(column, column[i]);
+				 checkForWinnerRow(row, column[i]);
+				break;
+				}
+				
+			}
+		}
+	
+
+
+
+let row = [];
+
+
+	for(let j = 0; j < cFB.length; j++){
+		row.push(cFB[j][j])
+		console.log(row)
+		// overTile(cFB[j][0], player1)
+		
+	}
+
+
+
+
+function checkForWinnerColumn(column, currentTile) {
+		if ((column[i - 1] === currentTile) && (column[i - 2] === currentTile)
+			&& (column[i - 3] === currentTile)) {
+		console.log('Winner');
+			}
+		}
+
+
+
+
+// dropTile(cFB[i][0], player1);
+
+// dropTile(cFB[0], cFB[0][0], player1);
+dropTile(cFB[0], cFB[0][0], player1);
+dropTile(cFB[1], cFB[1][0], player1);
+dropTile(cFB[2], cFB[2][0], player1);
+dropTile(cFB[3], cFB[3][0], player1);
+
+
+
+
+
+function checkForWinnerRow(currentTile) {
+	for (let r = 0; r < cFB.length; r++) {
+		for (let c = 0; c < cFB[r].length; c++) {	
+			if ((cFB[r + 1][c] === currentTile) && (cFB[r + 2][c] === currentTile)
+			 	&& (cFB[r + 3][c] === currentTile)) {
+				console.log('Winner');
+			}
+			else if ((cFB[r - 1][c] === currentTile)
+				&& (cFB[r - 2][c] === currentTile)
+			 && (cFB[r - 3][c] === currentTile)) {
+				console.log('Winner');
+			}
+			else if((cFB[r - 1][c] === currentTile) && (cFB[r + 1][c] === currentTile) 
+				&& (cFB[r + 2][c] === currentTile)) {
+				console.log('Winner');
+			}
+			else if ((cFB[r - 2][c] === currentTile) && (cFB[r - 1][c] === currentTile)
+				&& (cFB[r + 1][c] === currentTile)) {
+				console.log('Winner');
+			}
+
+			
+		}
 	}
 }
 
-createBoard();
 
 
 
-/////////////////////////////////
-/* I have set up my board, now I need to think about functionality. 
-How will the game work?
-
-Connect-four works in columns, the player drops a piece into a column. So I would need to create four column variables, 
-	eg. let column1 = document.querySelectorAll('#element-0, #element-7, #element-14, #element-21, #element-28, #element-35')
-
-	column1, column2, column3, column4, column5, column6, column7
-	row1, row2, row3, row4, row5, row6
-	diagonal arrays?
-
-			would check for winner run through all of these arrays? 
-
-Each is an array composed of the IDs of each element in that column. I would then add a click handler to each one. 
-
-Each click handler would invoke a function: to check to see which element of the array has a class of neither '.red' nor '.yellow'.
-
-I would call a for loop which would go through the length of the column array and check each element to see if it has either the class of yellow or red. 
-If one has neither then the current player's colour will be added (classlist.add) to that section. 
 
 
 
-*/
+
+
+
+
+
+
+
+
+ 	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
