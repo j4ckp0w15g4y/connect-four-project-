@@ -23,7 +23,9 @@ table {
 
 .gridContainer {
 	justify-content: right;
-	background-color: #70a6ff
+	background-color: #70a6ff;
+	transform: rotate(270deg);
+
 }
 
 .box {
