@@ -8,11 +8,29 @@ let cFB = [
 	[0, 0, 0, 0, 0, 0]
 ]
 
+let player1 = 1;
+let player2 = 2;
+
+
+
+let divContainer = document.querySelector('.gridContainer');
+let table = document.createElement('table');
+for (let row = 0; row < cFB.length; row++) {
+	let tr = document.createElement('tr');
+	for (let col = 0; col < cFB[row].length; col ++) {
+		let td = document.createElement('td');
+		let tn = document.createTextNode(cFB[row][col]);
+		td.appendchild(tn);
+		tr.appendchild(td);
+	}
+	table.appendChild(tr);
+}
+
+divContainer.appendChild(table);
 
 
 
 function dropTile(column, board, player) {
-	let currentPlayer = player1;
 	for (i = 0; i < column.length; i++) {
 		if (column[i] === 0) {
 			column[i] = player;
@@ -46,9 +64,9 @@ function checkForWinnerRow(board, currentTileIndex) {
 	}
 }			
  		
-function checkForWinnerDiagonal () {
+// function checkForWinnerDiagonal () {
 
-}
+// }
 
 
 
@@ -58,4 +76,49 @@ dropTile(cFB[1], cFB, player1);
 dropTile(cFB[2], cFB, player1);
 dropTile(cFB[3], cFB, player1);
 dropTile(cFB[4], cFB, player1);
+
+
+
+//dom controller object 
+
+/* 
+
+const domController = {
+	body: document.querySelector('body'),
+	main: document.createElement('main'),
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

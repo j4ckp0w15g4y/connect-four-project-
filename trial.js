@@ -9,28 +9,29 @@ let row;
 let currentPlayer = playerOne; 
 
 let cFB = [
-	[0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0]
+	[],
+	[]
+	[]
+	[]
+	[]
+	[]
 ]
 
 function gameTable(array) {
 	    let table = document.createElement('table');
-	    console.log(table[0]);
 	    for (let i = 0; i < array.length; i++) {
 	        let column = document.createElement('tr');
-	        column.classList.add(`${i}`);	
+	        column.classList.add(`${i}`);
+	        console.log(column.classList);
 	        column.addEventListener('click', function (event) {
 	        	let position = column.className;	        	
-	        	dropTile(cFB, position, event.target.parentNode);	   
-	        })	        	
+	        	dropTile(cFB, position, event.target);
+	        })
+
+	        	
 	        for (let j = 0; j < array[i].length; j++) {
 	            let row = document.createElement('td');
-	            row.classList.add(`row`);
+	            row.classList.add('row', 'add');
 	            if (array[i][j] === 0) {
 	            	row.classList.add('white');	        
 	            } 
@@ -44,26 +45,20 @@ function gameTable(array) {
 	    return table;
 
 	    function dropTile(array, position, event) {
-	    	let children = event.children;
-					for ( i = 0; i < array[position].length; i++) {
+					for (i = 0; i < array[position].length; i++) {
 						if (array[position][i] === 0) {
-						array[position][i] = currentPlayer;
+						array[position][i] = switchPlayer();
 						console.log(cFB);
-						break;
 					}						 		
 			 	}
-			 		if (array[position][i] === 1) {
-						 	children[i].style.backgroundColor = 'red';
-						 	console.log(event);
-						 						
-						 	switchPlayer();										 	
+			 		if (currentPlayer === 1) {
+						 	event.classList.add('red');
+						 	console.log(event);											 	
 						} else if (currentPlayer === 2) {
-							children[i].style.backgroundColor = 'yellow';
-							switchPlayer();							
+							event.classList.add('yellow');							
 						}			
-			 		}
-				}	
-			
+			}	
+		}
 			
 
 function switchPlayer() {

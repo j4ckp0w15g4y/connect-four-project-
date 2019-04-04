@@ -1,41 +1,70 @@
+
+h1 {
+	text-align: center;
+	font-family: 'MedievalSharp', cursive;
+	font-size: 40px;
+	
+
+
+}
+
+body {
+	background-image: url("images/medieval-castle.png");
+	background-position: right bottom;
+	display: block;
+	background-repeat: no-repeat;
+}
+
+table {
+	float: left;
+	margin-left: 50px;
+}
+
+
 .gridContainer {
-	display: grid;
-	grid-template-columns: repeat(7, 60px);
-	grid-template-rows: repeat(6, 60px);
-	width: 420px;
-	justify-content: center;
-	background-color: #061C74;	
-	margin-top: 40px;
-	position: absolute;
-	left: 35%;
-
-
+	justify-content: right;
+	background-color: #70a6ff
 }
 
 .box {
 	background-color: white;
 	border-radius: 50%;
-	margin: 10px;
+
+
+}
+
+
+.white {
+	background-color: white;
+	border-radius: 50%;
+
 	text-align: center;
-
 }
 
-.red-piece {
-	background-color: #ff2626
-
-}
-
-.yellow-piece {
-	background-color: #fffb26
-
-}
 
 
 .red{
-	background-color:red;
-}.green{
-	background-color:green;
+	background-color: red;
+
 }
+
+.yellow{
+	background-color: yellow;
+}
+
+
+.column {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+}
+
+.row {
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+}
+
 
 
 
