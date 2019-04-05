@@ -1,6 +1,7 @@
 # connect-the-fourth-project-
 Connect Four project for GA
 
+## Outline 
 I have made a simple Connect-Four style project that utilises Vanilla Javascript, CSS, and HTML.  
 
 Connect-four works in columns, the player drops a piece into a column. So I would need to create four column variables, 
@@ -41,6 +42,10 @@ function createBoard () {
 }
 
 createBoard();
+
+## Issues
+
+I still need to implement a function that checks for a diagonal winner, and a function that checks for a tie.
 
 
 ## Deployment 
