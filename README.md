@@ -43,6 +43,10 @@ function createBoard () {
 
 createBoard();
 
+## Main page 
+
+![Main page](desktop/mainpage.png)
+
 ## Issues
 
 I still need to implement a function that checks for a diagonal winner, and a function that checks for a tie.
