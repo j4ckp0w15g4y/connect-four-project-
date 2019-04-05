@@ -2,7 +2,7 @@
 h1 {
 	text-align: center;
 	font-family: 'MedievalSharp', cursive;
-	font-size: 40px;
+	font-size: 50px;
 	
 
 
@@ -10,9 +10,12 @@ h1 {
 
 body {
 	background-image: url("images/medieval-castle.png");
+	background-color: ;
 	background-position: right bottom;
 	display: block;
 	background-repeat: no-repeat;
+	text-align: center;
+	width: 100%;
 }
 
 table {
@@ -20,11 +23,18 @@ table {
 	margin-left: 50px;
 }
 
+audio {
+	width: 100px;
+	position: absolute;
+	bottom: 1%;
+}
+
 
 .gridContainer {
 	justify-content: right;
 	background-color: #70a6ff;
 	transform: rotate(270deg);
+	border-radius: 5%;
 
 }
 
@@ -67,7 +77,38 @@ table {
 	margin: 10px;
 }
 
+.modal-background {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, .3);
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 1;
+}
 
+.modal-content {
+font-family: 'MedievalSharp', cursive;
+font-size: 20px;
+margin: 0 auto;
+  padding: 40px 20px;
+  color: #444;
+  background-color: white;
+  width: 60%;
+}
+
+
+#showModal {
+	font-family: 'MedievalSharp', cursive;
+	font-size: .85em;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 5%;
+}
 
 
 
