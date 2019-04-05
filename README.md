@@ -1,7 +1,7 @@
 # connect-the-fourth-project-
 Connect Four project for GA
 
-I am making a Connect-Four style project that utilises HTML, CSS, JavaScript, collision detection, and CSS animation. 
+I have made a simple Connect-Four style project that utilises Vanilla Javascript, CSS, and HTML.  
 
 Connect-four works in columns, the player drops a piece into a column. So I would need to create four column variables, 
 	eg. let column1 = document.querySelectorAll('#element-0, #element-7, #element-14, #element-21, #element-28, #element-35')
@@ -42,3 +42,7 @@ function createBoard () {
 
 createBoard();
 
+
+## Deployment 
+
+This project is available at [http://connect-the-fourth.surge.sh/] (http://connect-the-fourth.surge.sh/)
