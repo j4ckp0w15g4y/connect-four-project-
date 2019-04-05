@@ -38,8 +38,7 @@ let cFB = [
 ]
 
 function gameTable(array) {
-	    let table = document.createElement('table');
-	    console.log(table[0]);
+	    let table = document.createElement('table');	    
 	    for (let i = 0; i < array.length; i++) {
 	        let column = document.createElement('tr');
 	        column.classList.add(`${i}`);	
@@ -70,8 +69,7 @@ function gameTable(array) {
 					}						 		
 			 	}
 			 		if (array[position][i] === 1) {
-						 	children[i].style.backgroundColor = '#a87138';
-						 	console.log(event);
+						 	children[i].style.backgroundColor = '#a87138';						 	
 						 	checkForWinnerColumn(cFB[position], cFB[position][i]);
 						 	checkForWinnerRow(cFB, i);
 						 	switchPlayer();										 	

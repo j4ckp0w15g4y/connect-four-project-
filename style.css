@@ -1,21 +1,11 @@
-html {
-	background: url(images/manuscript.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
- /*Above taken from CSS Tricks*/
-
-
-
 h1 {
 	font-family: 'MedievalSharp', cursive;
 	font-size: 50px;
 	background-color: white;
 	display: inline-block;
-	border-radius: 10%;
+	border-radius: 5%;
 	padding: 10px;
+	border-style: double;
 
 
 }
@@ -39,10 +29,32 @@ audio {
 	justify-content: right;
 	background-color: #4a6fb6;
 	transform: rotate(270deg);
-	border-radius: 5%;
+	border-style: double;
 
 
 }
+
+.background-image {
+  background: url(images/manuscript.jpg) no-repeat center center fixed;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*used some code from stack overflow + CSS Tricks for the blurred background*/
+
 
 .above {
 	text-align: center;
@@ -63,17 +75,6 @@ audio {
 	text-align: center;
 }
 
-
-
-/*.red{
-	background-color: #ba9e55;
-
-}
-
-.yellow{
-	background-color: yellow;
-}
-*/
 
 .column {
 	width: 60px;
