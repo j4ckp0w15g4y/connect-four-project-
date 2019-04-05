@@ -45,7 +45,7 @@ createBoard();
 
 ## Main page 
 
-![Main page](desktop/mainpage.png)
+![Main page](mainpage)
 
 ## Issues
 
