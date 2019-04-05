@@ -1,41 +1,51 @@
+html {
+	background: url(images/manuscript.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ /*Above taken from CSS Tricks*/
+
+
 
 h1 {
-	text-align: center;
 	font-family: 'MedievalSharp', cursive;
 	font-size: 50px;
-	
+	background-color: white;
+	display: inline-block;
+	border-radius: 10%;
+	padding: 10px;
 
 
 }
 
-body {
-	background-image: url("images/medieval-castle.png");
-	background-color: ;
-	background-position: right bottom;
-	display: block;
-	background-repeat: no-repeat;
-	text-align: center;
-	width: 100%;
-}
+
 
 table {
-	float: left;
-	margin-left: 50px;
+	margin: 0 auto;
 }
 
 audio {
 	width: 100px;
 	position: absolute;
 	bottom: 1%;
+	left: 5%;
+	margin: 0 auto;
 }
 
 
 .gridContainer {
 	justify-content: right;
-	background-color: #70a6ff;
+	background-color: #4a6fb6;
 	transform: rotate(270deg);
 	border-radius: 5%;
 
+
+}
+
+.above {
+	text-align: center;
 }
 
 .box {
@@ -55,15 +65,15 @@ audio {
 
 
 
-.red{
-	background-color: red;
+/*.red{
+	background-color: #ba9e55;
 
 }
 
 .yellow{
 	background-color: yellow;
 }
-
+*/
 
 .column {
 	width: 60px;

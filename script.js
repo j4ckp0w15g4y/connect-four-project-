@@ -70,13 +70,13 @@ function gameTable(array) {
 					}						 		
 			 	}
 			 		if (array[position][i] === 1) {
-						 	children[i].style.backgroundColor = 'red';
+						 	children[i].style.backgroundColor = '#a87138';
 						 	console.log(event);
 						 	checkForWinnerColumn(cFB[position], cFB[position][i]);
 						 	checkForWinnerRow(cFB, i);
 						 	switchPlayer();										 	
 						} else if (currentPlayer === 2) {
-							children[i].style.backgroundColor = 'yellow';
+							children[i].style.backgroundColor = '#ba9e55';
 							checkForWinnerColumn(cFB[position], cFB[position][i]);
 							checkForWinnerRow(cFB, i);
 							switchPlayer();							
